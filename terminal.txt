@@ -1,0 +1,5 @@
+1 - alembic revision --autogenerate -m "Create a baseline migrations"
+2 - alembic upgrade head
+
+3 - docker-compose up
+

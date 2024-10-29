@@ -1,0 +1,30 @@
+version: "3.10"
+
+services:
+  bot:
+    build: .
+    restart: always
+    container_name: imtihon_con
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres:alpine
+    container_name: pg
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=1
+    ports:
+       - 5433:5432
+    volumes:
+      - pg_data:/var/lib/postgresql
+
+volumes:
+  pg_data:
+
+
+
+
+
+
+
